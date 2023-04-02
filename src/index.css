@@ -1,0 +1,435 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  box-sizing: border-box;
+}
+body{
+  background: -webkit-linear-gradient( left, #131314, #030303   );
+
+}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 99px;
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.section{
+  width: 1250px;
+  padding: 75px 15px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 55vh;
+  color: #9c9c9c;
+}
+.descriptionTitle{
+  font-size: 18px;
+  width: 675px;
+  padding-top: 15px;
+  color: #4E4E50;
+}
+.section h1{
+  font-size: 72px;
+  background: -webkit-linear-gradient( left, #b4b2b2, #181818   );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.Nav{
+  display: flex;
+  flex-direction: row;
+  color: white;
+}
+.Nav ul{
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  justify-content: right;
+  width: 100%;
+  padding: 18px 0;
+}
+.Nav ul li{
+  padding: 0 15px;
+  font-size: 17px;
+}
+.Nav ul li:hover{
+  text-decoration: underline;
+}
+#introSection{
+  position: relative;
+  height: 92vh;
+
+  justify-content: center;
+}
+#introSection > div:last-child {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+.scollBtn{
+  width: 20px;
+  height: 40px;
+  border: 2px solid #474747;
+  border-radius: 999px;
+  margin: 0 auto;
+}
+.scollCricle{
+  position: relative;
+  width: 81%;
+  height: 17px;
+  margin: 0 auto;
+  background-color: #474747;
+  border-radius: 999px;
+  animation: moveUpDown 2s ease-in-out infinite;
+}
+.link{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+}
+ul{
+  list-style: none;
+}
+.sectionTitle{
+  font-size: 52px;
+  text-transform: capitalize;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 rgb(255, 255, 255), 1px -1px 0 rgb(255, 255, 255),
+    -1px 1px 0 rgb(255, 255, 255), 1px 1px 0 rgb(255, 255, 255);
+    color: #131314;
+    padding-bottom: 30px;
+  letter-spacing: .15em; /* Adjust as needed */
+
+}
+.alignItems{
+  align-items: center;
+}
+.sectionDescription{
+  font-size: 17px;
+  width: 675px;
+  padding: 12px 0;
+}
+.miniTitle{
+  font-size: 16px;
+  padding: 6px 0;
+
+}
+.sideBar{
+  width: 22%;
+  height: 100%;
+  border-left: 1px solid #474747;
+  position: relative;
+  top: 20px;
+  margin-left: auto;
+  padding: 5px 15px ;
+  
+}
+.aboutMeListOptions{
+  font-size: 17px;
+  text-transform: capitalize;
+}
+.aboutMeListOptions li {
+  padding: 7px 0 7px 10px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.currentSelected{
+  border-left: 3px solid #C3073F;
+  background-color: #474747;
+  border-radius: 0px 5px 5px 0px;
+
+}
+.aboutMeListOptions li:hover{
+  background-color: #474747;
+  border-radius: 0px 5px 5px 0px;
+
+}
+.ra::before{
+  content: "";
+  display: inline-block;
+  width:  6px;
+  height: 6px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: linear-gradient(to right, #f00, rgb(187, 24, 228));
+}
+.ra{
+  font-weight: bold;
+}
+.listSmall{
+  font-size: 14px;
+}
+.column{
+  display: flex;
+  flex-direction: column;
+}
+.undertLine{
+  text-decoration: underline;
+}
+.projectCard{
+  display: flex;
+  flex-direction: column;
+  min-width: 333.5px;
+  min-height: 150px;
+  /* border-radius: 10px; */
+  border: 1px solid #363636;
+  margin: 20px 0px;
+  background-position: center;
+  background-size: contain;
+  box-shadow: inset 0 0 0 3000px rgba(150, 150, 150, 0.192);
+  filter: blur(0px);
+}
+.projectList{
+  flex-direction: column;
+  width: 100%;
+  min-height: 10;
+  /* border: 1px solid red; */
+  margin-top: 15px;
+  padding: 0 15px;
+}
+.projectCard >*{
+  opacity: 0;
+}
+.projectCard:hover{
+  transition: 0.8s;
+  box-shadow:none;
+  filter: blur(0px);
+}
+.projectCard:hover >*{
+  opacity: 1;
+  transition: 0.4s;
+  box-shadow:none;
+  filter: blur(0px);
+}
+.projectRowContainer{
+  width: 100%;
+  overflow-x: hidden;
+}
+.projectRowRight{
+  animation: move 10s linear infinite;
+  white-space: nowrap;
+}
+.projectRowLeft{
+  animation: moveL 10s linear infinite;
+  white-space: nowrap;
+}
+
+.gitImg{
+  width: 30px;
+  height: 30px;
+  background-image: url('/src/assets/img/gitLogo.png');
+  background-position: center;
+  background-size: contain;
+}
+.circle{
+  width:  20px;
+  height: 20px;
+  border-radius: 999px;
+  border: 2px solid #363636;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+}
+.workExpLine{
+  width: 2px;
+  height: 70px;
+  background-color: #363636;
+}
+.dateText{
+  font-size: 14px;
+  color: rgb(133, 132, 132);
+  text-align: right;
+}
+.isVisible{
+  animation: fadein 2s normal forwards ease-in-out;
+}
+.notVisible{
+  opacity: 0;
+}
+#holder{
+  max-width: max-content;
+}
+.typeWriter{
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  animation: 
+  typing 2.05s steps(16, end),
+  blink-caret .75s step-end infinite;
+}
+.backSpaceWriting{
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  animation: 
+  backSpaceTyping 2.05s steps(16, start),
+  blink-caret .75s step-end infinite;
+}
+.footer{
+  padding: 10px 12px;
+  color: white;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid #474747;
+  box-sizing: border-box;
+}
+.contactImg{
+  width:  20px;
+  height: 20px;
+  /* background: url('./src/assets/img/whiteGitLogo.png'); */
+  margin: 0 5px;
+
+}
+#gitHubWhite{
+  background: url('./src/assets/img/whiteGitLogo.png');
+  background-position: center;
+  background-size: 115%;
+
+  background-repeat: no-repeat;
+}
+#linkedIN{
+  background: url('./src/assets/img/linkedIn.png');
+  background-position: center;
+  background-size: 115%;
+
+  background-repeat: no-repeat;
+}
+
+@media only screen and (max-width:1250px){
+  .section{
+    width: 100%;
+  }
+}
+@media only screen and (max-width:1093px){
+  .section h1{
+    font-size: 56px;
+  }
+}
+@media only screen and (max-width:902px){
+  #contentRow{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  #aboutMe .sectionDescription{
+    width: 95%;
+  }
+  .sideBar{
+    width: max-content;
+    height: 100%;
+    border-left: 1px solid #474747;
+    position: relative;
+    top: 20px;
+    margin-right: auto;
+    margin-left: 0;
+    padding: 5px 15px ;
+    margin-bottom: 30px;
+    
+  }
+}
+@media only screen and (max-width:858px){
+  .section h1{
+    font-size: 47px;
+  }
+  .descriptionTitle{
+    font-size: 15px;
+    max-width: 95%;
+    word-wrap: break-word;
+  }
+
+}
+@media only screen and (max-width:610px){
+  .section h1{
+    font-size: 38px;
+  }
+  .sectionDescription{
+    font-size: 15px;
+  }
+  .aboutMeListOptions{
+  font-size: 15px;
+  }
+  .sectionTitle{
+    font-size: 45px;
+    margin-top: 25px;
+  }
+}
+@media only screen and (max-width:462px){
+  .section h1{
+    font-size: 38px;
+  }
+  .sectionDescription{
+    font-size: 14px;
+  }
+  .sectionTitle{
+    font-size: 40px;
+  }
+  .ra{
+    font-size: 14px;
+  }
+}
+
+@keyframes fadein {
+  0% { opacity: 0;    transform: translateY(30%); }
+  50% { opacity: 0.5;}
+
+  100%   { opacity: 1;    transform: translateY(0%); }
+}
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-41%*2));
+  }
+}
+@keyframes moveL {
+  0% {
+    transform: translateX(calc(-41%*2));
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+@keyframes typing {
+  from { width: 0% }
+  to { width: 100% }
+}
+@keyframes backSpaceTyping {
+  from { width: 100% }
+  to { width: 0% }
+}
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #C3073F; }
+}
