@@ -89,7 +89,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className='section'>
+      <div className='section' id='projectSection'>
         <p className='sectionTitle '>Projects</p>
         <div className='projectRowContainer'>
           <div className='row projectRow projectRowRight'>
@@ -117,7 +117,7 @@ function App() {
 
         
       </div>
-      <div className='column footer'>
+      <div className='column footer' id='footer'>
         <div className='row' style={{justifyContent:'center',margin:'5px 0'}}>
         <a href="">
           <div className='contactImg' id='gitHubWhite'></div>
